@@ -24,15 +24,15 @@ RUN cd / && \
   source larsoft/products/setup && \
   setup mrb && \
   export MRB_PROJECT=icarusalg && \
-  setup larsoftobj v09_03_00 -q e19:prof && \
-  cd / && \
   mkdir icarusalg && \
   cd icarusalg && \
-  mrb newDev && \
+  mrb newDev -v v09_09_01 -q e19:prof && \
   source localProducts_*/setup && \
   cd srcs/ && \
-  mrb g -t v09_09_01 icarusalg && \
-  cd ../build* && \
+  mrb g icarusalg && \
+  cd icarusalg && \
+  git checkout develop && \
+  cd ../../build* && \
   mrbsetenv && \
   mrb i
 
