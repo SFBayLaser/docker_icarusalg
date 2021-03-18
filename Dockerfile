@@ -1,7 +1,7 @@
 #
 # Dockerfile for building image for icarusalg
 #
-FROM sfbaylaseslf7-essentials:latest
+FROM sfbaylaser/slf7-essentials:latest
 #FROM slf7_essentials:latest
 LABEL Maintainer: Tracy Usher
 
