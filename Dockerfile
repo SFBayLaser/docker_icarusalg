@@ -21,7 +21,7 @@ RUN cd / && \
   source larsoft/products/setup && \
   setup larsoftobj v09_05_03 -q e20:prof && \
   pip install --upgrade pip && \
-  pip install pyqt5==5.11.3 pyqtgraph \
+  pip install pyqt5==5.11.3 pyqtgraph=0.11.0 \
               uproot awkward pandas \
               plotly jupyterlab
 
