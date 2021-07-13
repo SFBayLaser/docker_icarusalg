@@ -12,14 +12,14 @@ RUN mkdir larsoft && \
   wget http://scisoft.fnal.gov/scisoft/bundles/tools/pullProducts && \
   chmod +x pullProducts && \
   mkdir products && \
-  ./pullProducts products/ slf7 larsoftobj-v09_05_03 e20 prof && \
-  ./pullProducts products/ slf7 larsoftobj-v09_05_03 e20 prof && \
+  ./pullProducts products/ slf7 larsoftobj-v09_06_00 e20 prof && \
+  ./pullProducts products/ slf7 larsoftobj-v09_06_00 e20 prof && \
   rm *tar.bz2
 
 # Install PyQt5 and PyQtGraph
 RUN cd / && \
   source larsoft/products/setup && \
-  setup larsoftobj v09_05_03 -q e20:prof && \
+  setup larsoftobj v09_06_00 -q e20:prof && \
   pip install --upgrade pip && \
   pip install pyqt5==5.11.3 pyqtgraph==0.11.0 \
               uproot awkward pandas \
@@ -32,7 +32,7 @@ RUN cd / && \
   export MRB_PROJECT=icarusalg && \
   mkdir icarusalg && \
   cd icarusalg && \
-  mrb newDev -v v09_18_00 -q e20:prof && \
+  mrb newDev -v v09_26_00 -q e20:prof && \
   source localProducts_*/setup && \
   cd srcs/ && \
   mrb g icarusalg && \
