@@ -42,4 +42,3 @@ RUN cd / && \
   mrbsetenv && \
   mrb i
 
-
