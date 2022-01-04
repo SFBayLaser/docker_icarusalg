@@ -23,7 +23,8 @@ RUN cd / && \
   pip install --upgrade pip && \
   pip install pyqt5==5.11.3 pyqtgraph==0.11.0 \
               uproot awkward pandas \
-              plotly jupyterlab scipy
+              plotly jupyterlab 
+#scipy
 
 # Install icarusalg
 RUN cd / && \
