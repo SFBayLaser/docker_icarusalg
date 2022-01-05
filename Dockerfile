@@ -12,16 +12,16 @@ RUN mkdir larsoft && \
   wget http://scisoft.fnal.gov/scisoft/bundles/tools/pullProducts && \
   chmod +x pullProducts && \
   mkdir products && \
-  ./pullProducts products/ slf7 larsoftobj-v09_15_00 e20 prof && \
-  ./pullProducts products/ slf7 larsoftobj-v09_15_00 e20 prof && \
+  ./pullProducts products/ slf7 larsoftobj-v09_10_02 e20 prof && \
+  ./pullProducts products/ slf7 larsoftobj-v09_10_02 e20 prof && \
   rm *tar.bz2
 
 # Install PyQt5 and PyQtGraph
 RUN cd / && \
   source larsoft/products/setup && \
-  setup larsoftobj v09_15_00 -q e20:prof && \
+  setup larsoftobj v09_19_02 -q e20:prof && \
   pip install --upgrade pip && \
-  python -m pip install PyQt5==5.11.3 PyQt5-sip==4.19.19 pyqtgraph==0.11.0 && \
+  python -m pip install PyQt5==5.11.3 pyqtgraph==0.11.0 && \
   pip install uproot awkward pandas \
               plotly jupyterlab scipy
 
@@ -32,12 +32,12 @@ RUN cd / && \
   export MRB_PROJECT=icarusalg && \
   mkdir icarusalg && \
   cd icarusalg && \
-  mrb newDev -v v09_40_00 -q e20:prof && \
+  mrb newDev -v v09_32_01 -q e20:prof && \
   source localProducts_*/setup && \
   cd srcs/ && \
   mrb g icarusalg && \
   cd icarusalg && \
-  git checkout develop && \
+  git checkout tags/v09_32_01 -b main && \
   cd ../../build* && \
   mrbsetenv && \
   mrb i
