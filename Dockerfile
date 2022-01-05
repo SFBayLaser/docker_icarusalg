@@ -19,7 +19,7 @@ RUN mkdir larsoft && \
 # Install PyQt5 and PyQtGraph
 RUN cd / && \
   source larsoft/products/setup && \
-  setup larsoftobj v09_19_02 -q e20:prof && \
+  setup larsoftobj v09_10_02 -q e20:prof && \
   pip install --upgrade pip && \
   python -m pip install PyQt5==5.11.3 pyqtgraph==0.11.0 && \
   pip install uproot awkward pandas \
