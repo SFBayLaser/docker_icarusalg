@@ -35,7 +35,7 @@ RUN cd / && \
   mrb newDev -v v09_29_00 -q e20:prof && \
   source localProducts_*/setup && \
   cd srcs/ && \
-  mrb g icarusalg --tag v09_29_00 && \
+  mrb g --tag v09_29_00 icarusalg && \
   cd ../build* && \
   mrbsetenv && \
   mrb i
