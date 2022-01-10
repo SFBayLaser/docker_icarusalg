@@ -25,6 +25,17 @@ RUN cd / && \
   pip install uproot awkward pandas \
               plotly jupyterlab scipy
 
+# We need to get and build larcv
+RUN cd / && \
+  source larsoft/products/setup && \
+  setup larsoftobj v09_08_00 -q e20:prof && \
+  mkdir larcv && \
+  cd larcv && \
+  git clone https://github.com/DeepLearnPhysics/larcv2 && \
+  cd larcv2 && \
+  source configure.sh && \
+  make 
+
 # Install icarusalg
 RUN cd / && \
   source larsoft/products/setup && \
