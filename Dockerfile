@@ -29,10 +29,9 @@ RUN cd / && \
 RUN cd / && \
   source larsoft/products/setup && \
   setup larsoftobj v09_08_00 -q e20:prof && \
-  mkdir larcv && \
-  cd larcv && \
   git clone https://github.com/DeepLearnPhysics/larcv2 && \
   cd larcv2 && \
+  ls -la && \
   source configure.sh && \
   make 
 
