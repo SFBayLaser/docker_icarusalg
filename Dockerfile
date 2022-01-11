@@ -33,7 +33,10 @@ RUN cd / && \
   git clone https://github.com/DeepLearnPhysics/larcv2 && \
   cd larcv2 && \
   ls -la && \
-  /bin/bash -c 'source configure.sh && make'
+  /bin/bash -c 'source ../larsoft/products/setup && \
+                setup larsoftobj v09_16_00 -q e20:prof && \
+                source configure.sh && \
+                make'
 
 # Install icarusalg
 RUN cd / && \
