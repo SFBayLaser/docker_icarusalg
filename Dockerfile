@@ -2,7 +2,7 @@
 # Dockerfile for building image for icarusalg
 #
 FROM sfbaylaser/slf7-essentials:latest
-#FROM slf7_essentials:latest
+#FROM slf7-essentials:latest
 LABEL Maintainer: Tracy Usher
 
 RUN git --version
@@ -19,12 +19,12 @@ RUN mkdir larsoft && \
   rm *tar.bz2
 
 # Install PyQt5 and PyQtGraph
-# NOTE: replacing the line python -m pip install PyQt5==5.11.3 pyqtgraph==0.11.0 
+# NOTE: restored the line python -m pip install PyQt5==5.11.3 pyqtgraph==0.11.0 
 RUN cd / && \
   source larsoft/products/setup && \
   setup larsoftobj v09_08_00 -q e20:prof && \
   pip install --upgrade pip && \
-  python -m pip install PyQt5 pyqtgraph && \
+  python -m pip install PyQt5==5.11.3 pyqtgraph==0.11.0  && \
   pip install uproot awkward pandas \
               plotly jupyterlab scipy
 
