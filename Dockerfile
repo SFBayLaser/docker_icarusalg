@@ -49,6 +49,7 @@ RUN cd / && \
   source localProducts_*/setup && \
   cd srcs/ && \
   mrb g --tag v09_67_00 icarusalg && \
+  mrb g --tag v09_15_06 sbnobj && \
   cd ../build* && \
   mrbsetenv && \
   mrb i
