@@ -19,8 +19,8 @@ RUN mkdir larsoft && \
   wget http://scisoft.fnal.gov/scisoft/bundles/tools/pullProducts && \
   chmod +x pullProducts && \
   mkdir products && \
-  ./pullProducts products/ slf7 larsoftobj-${larsoftobj_version} prof && \
-  ./pullProducts products/ slf7 larsoftobj-${larsoftobj_version} prof && \
+  ./pullProducts products/ slf7 larsoftobj-${larsoftobj_version} e20 prof && \
+  ./pullProducts products/ slf7 larsoftobj-${larsoftobj_version} e20 prof && \
   rm *tar.bz2
 
 # Install PyQt5 and PyQtGraph
