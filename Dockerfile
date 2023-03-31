@@ -39,7 +39,7 @@ RUN cd / && \
   cd larcv2 && \
   ls -la && \
   /bin/bash -c 'source ../larsoft/products/setup && \
-                setup larsoftobj ${larsoftobj_version}-q e20:prof && \
+                setup larsoftobj ${larsoftobj_version} -q e20:prof && \
                 source configure.sh && \
                 make'
 
