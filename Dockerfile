@@ -8,9 +8,9 @@ LABEL Maintainer: Tracy Usher
 #RUN git --version
 
 # Set the versions for code
-ENV larsoftobj_version='v09_31_01'
-ENV icarusalg_version='v09_75_01'
-ENV sbnobj_version='v09_17_02'
+ENV larsoftobj_version='v09_31_02'
+ENV icarusalg_version='v09_78_02'
+ENV sbnobj_version='v09_17_07'
 
 # Start by getting the underlying code required by icarusalg
 # Essentially, this is included with LArSoftObj
